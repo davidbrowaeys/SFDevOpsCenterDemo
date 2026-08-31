@@ -1,0 +1,13 @@
+{
+    "pollingTimeout" : 120000,
+    "objects": [
+        {
+          "active" : true,
+          "objectName" : "Account", 
+          "filename" : "TestAccounts.csv",
+          "externalField" : "External_ID__c",
+          "fields": "External_ID__c,Name,Industry,ShippingStreet,ShippingCity",
+          "where" : "External_ID__c != null"
+        }
+    ]
+}

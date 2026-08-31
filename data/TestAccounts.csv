@@ -1,0 +1,31 @@
+external_id__c,name,industry,shippingstreet,shippingcity
+A1,Edge Communications,Electronics,"312 Constitution Place
+Austin, TX 78767
+USA",
+A2,Burlington Textiles Corp of America,Apparel,,
+A3,Pyramid Construction Inc.,Construction,2 Place Jussieu,Paris
+A4,Dickenson plc,Consulting,1301 Hoch Drive,Lawrence
+A5,Grand Hotels & Resorts Ltd,Hospitality,"2334 N. Michigan Avenue, Suite 1500
+Chicago, IL 60601, USA",
+A6,United Oil & Gas Corp.,Energy,"1301 Avenue of the Americas 
+New York, NY 10019
+USA",
+A7,Express Logistics and Transport,Transportation,"620 SW 5th Avenue Suite 400
+Portland, Oregon 97204
+United States",
+A8,University of Arizona,Education,"888 N Euclid 
+Hallis Center, Room 501
+Tucson, AZ 85721
+United States",
+A9,"United Oil & Gas, UK",Energy,"Kings Park, 17th Avenue, Team Valley Trading Estate,
+Gateshead, Tyne and Wear NE26 3HS
+United Kingdom",
+A10,"United Oil & Gas, Singapore",Energy,"9 Tagore Lane
+Singapore, Singapore 787472
+Singapore",
+A11,GenePoint,Biotechnology,"345 Shoreline Park
+Mountain View, CA 94043
+USA",
+A12,sForce,,,
+A13,Sample Account for Entitlements,,,
+A14,Farmers Coop. of Florida,Agriculture,,

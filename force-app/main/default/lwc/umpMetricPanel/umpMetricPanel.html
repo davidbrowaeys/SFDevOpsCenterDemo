@@ -1,0 +1,107 @@
+<template>
+  <template lwc:if={showPanel}>
+    <div class="panel-container" style={panelContainerStyle}>
+      <!-- Loading State -->
+      <template lwc:if={isLoading}>
+        <div class="loading-container">
+          <lightning-spinner
+            alternative-text={loadingText}
+            size="medium"
+          ></lightning-spinner>
+        </div>
+      </template>
+
+      <!-- Error State -->
+      <template lwc:if={error}>
+        <div class="error-container">
+          <lightning-icon
+            icon-name="utility:error"
+            variant="error"
+            size="small"
+          ></lightning-icon>
+          <span class="error-message">{error}</span>
+        </div>
+      </template>
+
+      <!-- Main Content -->
+      <template lwc:if={hasData}>
+        <!-- Panel Title -->
+        <h2 class="panel-title">{displayTitle}</h2>
+
+        <div class="panel-content">
+          <!-- Donut Chart Section -->
+          <div class="donut-section">
+            <div class="donut-chart-container">
+              <!-- SVG Donut Chart -->
+              <svg class="donut-chart" viewBox="0 0 100 100">
+                <template for:each={donutChartSegments} for:item="segment">
+                  <path
+                    key={segment.id}
+                    d={segment.path}
+                    fill={segment.color}
+                    class="donut-segment"
+                  ></path>
+                </template>
+              </svg>
+              <!-- Center Count -->
+              <div class="donut-center">
+                <span class="donut-count">{totalCount}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Legend Section -->
+          <div class="legend-section">
+            <h3 class="legend-title">{donutTitleWithCount}</h3>
+            <div class="legend-items">
+              <template for:each={legendItems} for:item="item">
+                <div key={item.id} class="legend-item">
+                  <span class="legend-dot" style={item.dotStyle}></span>
+                  <span class="legend-text">{item.displayText}</span>
+                </div>
+              </template>
+            </div>
+            <a class="view-all-link" onclick={handleViewAll}>
+              <lightning-icon
+                icon-name="utility:open"
+                size="xx-small"
+                class="view-all-icon"
+              ></lightning-icon>
+              <span>{viewAllText}</span>
+            </a>
+          </div>
+
+          <!-- Metrics Section -->
+          <template for:each={metrics} for:item="metric">
+            <div key={metric.label} class="metric-section">
+              <h3 class="metric-label">{metric.label}</h3>
+              <template lwc:if={metric.showQuarters}>
+                <div class="metric-values-quarters">
+                  <div class="metric-quarter">
+                    <span class="metric-value"
+                      >{metric.lastQuarterFormatted}</span
+                    >
+                    <span class="metric-period">{lastQuarterLabel}</span>
+                  </div>
+                  <div class="metric-quarter">
+                    <span class="metric-value"
+                      >{metric.thisQuarterFormatted}</span
+                    >
+                    <span class="metric-period">{thisQuarterLabel}</span>
+                  </div>
+                </div>
+              </template>
+              <template lwc:else>
+                <div class="metric-value-single">
+                  <span class="metric-value-large"
+                    >{metric.thisQuarterFormatted}</span
+                  >
+                </div>
+              </template>
+            </div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </template>
+</template>

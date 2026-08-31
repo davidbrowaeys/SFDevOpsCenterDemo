@@ -1,0 +1,230 @@
+/* Universal Metric Panel - Dark Navy Theme */
+/* Matches Account Plan UI styling */
+
+.panel-container {
+    /* Background is set via inline style for configurability */
+    border-radius: 12px;
+    padding: 24px;
+    color: #ffffff;
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    min-height: 180px;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+
+/* Error State */
+.error-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background: rgba(255, 77, 79, 0.1);
+    border-radius: 8px;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+}
+
+/* Panel Title */
+.panel-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.3px;
+}
+
+/* Panel Content - Flex Layout */
+.panel-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+/* Donut Chart Section */
+.donut-section {
+    flex: 0 0 auto;
+}
+
+.donut-chart-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.donut-chart {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.donut-segment {
+    transition: opacity 0.2s ease;
+}
+
+.donut-segment:hover {
+    opacity: 0.8;
+}
+
+.donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.donut-count {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* Legend Section */
+.legend-section {
+    flex: 1 1 280px;
+    min-width: 200px;
+}
+
+.legend-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    opacity: 0.95;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    white-space: nowrap;
+}
+
+/* View All Link */
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #00d4aa;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.view-all-link:hover {
+    color: #00f5c4;
+    text-decoration: underline;
+}
+
+.view-all-icon {
+    --slds-c-icon-color-foreground-default: #00d4aa;
+}
+
+/* Metric Sections */
+.metric-section {
+    flex: 0 0 auto;
+    min-width: 120px;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.metric-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 8px 0;
+    text-transform: none;
+}
+
+/* Metric Values - Quarters Layout */
+.metric-values-quarters {
+    display: flex;
+    gap: 24px;
+}
+
+.metric-quarter {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.metric-period {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 4px;
+}
+
+/* Single Metric Value */
+.metric-value-single {
+    display: flex;
+    align-items: baseline;
+}
+
+.metric-value-large {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .panel-content {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .metric-section {
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: 0;
+        padding-top: 16px;
+    }
+    
+    .legend-section {
+        flex: 1 1 100%;
+    }
+}
+
+/* Lightning Icon Overrides */
+lightning-icon {
+    --slds-c-icon-color-foreground-default: currentColor;
+}

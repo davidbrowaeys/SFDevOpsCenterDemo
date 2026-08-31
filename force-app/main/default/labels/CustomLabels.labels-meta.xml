@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>UMP_Loading</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Loading spinner text</shortDescription>
+        <value>Loading</value>
+    </labels>
+    <labels>
+        <fullName>UMP_Error_Occurred</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default error message</shortDescription>
+        <value>An error occurred</value>
+    </labels>
+    <labels>
+        <fullName>UMP_Default_Title</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default panel title</shortDescription>
+        <value>Metrics</value>
+    </labels>
+    <labels>
+        <fullName>UMP_Default_Items</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default items label</shortDescription>
+        <value>Items</value>
+    </labels>
+    <labels>
+        <fullName>UMP_Title_For</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title connector word</shortDescription>
+        <value>for</value>
+    </labels>
+    <labels>
+        <fullName>UMP_Last_Quarter</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Last quarter period label</shortDescription>
+        <value>Last Quarter</value>
+    </labels>
+    <labels>
+        <fullName>UMP_This_Quarter</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This quarter period label</shortDescription>
+        <value>This Quarter</value>
+    </labels>
+    <labels>
+        <fullName>UMP_View_All</fullName>
+        <categories>UMP_Metric_Panel</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View all link text</shortDescription>
+        <value>View All</value>
+    </labels>
+</CustomLabels>

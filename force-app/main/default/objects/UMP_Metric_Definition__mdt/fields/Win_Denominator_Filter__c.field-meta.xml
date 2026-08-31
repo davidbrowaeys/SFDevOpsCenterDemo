@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Win_Denominator_Filter__c</fullName>
+    <label>Win Denominator Filter</label>
+    <description>For WIN_RATE: SOQL WHERE clause for denominator (e.g., IsClosed = true)</description>
+    <type>LongTextArea</type>
+    <length>32768</length>
+    <visibleLines>5</visibleLines>
+    <required>false</required>
+</CustomField>

@@ -1,0 +1,867 @@
+# ======================================================================
+# CODE ANALYZER CONFIGURATION
+# To learn more about this configuration, visit:
+#   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/config-custom.html
+# ======================================================================
+
+# The absolute folder path to which all other path values in this configuration may be relative to.
+# If unspecified, or if specified as null, then the value is automatically chosen to be the parent folder of your Code Analyzer
+# configuration file if it exists, or the current working directory otherwise.
+config_root: null # Last calculated by the config command as: "C:\\Users\\dabrowaeys\\OneDrive - Deloitte (O365D)\\workspace\\NuggetOrgBE"
+
+# Folder where to store log files. May be an absolute path or a path relative to config_root.
+# If unspecified, or if specified as null, then the value is automatically chosen to be your machine's default temporary directory.
+log_folder: null # Last calculated by the config command as: "C:\\Users\\DABROW~1\\AppData\\Local\\Temp"
+
+# Level at which to log messages to log files.
+# Possible values are:
+#   1 or 'Error' - Includes only error messages in the log.
+#   2 or 'Warn' - Includes warning and error messages in the log.
+#   3 or 'Info' - Includes informative, warning, and error messages in the log.
+#   4 or 'Debug' - Includes debug, informative, warning, and error messages in the log.
+#   5 or 'Fine' - Includes fine detail, debug, informative, warning, and error messages in the log.
+# If unspecified, or if specified as null, then the 'Debug' log level will be used.
+log_level: 4
+
+# Rule override settings of the format rules.{engine_name}.{rule_name}.{property_name} = {override_value} where:
+#   {engine_name} is the name of the engine containing the rule that you want to override.
+#   {rule_name} is the name of the rule that you want to override.
+#   {property_name} can either be:
+#     'severity' - [Optional] The severity level value that you want to use to override the default severity level for the rule
+#                  Possible values: 1 or 'Critical', 2 or 'High', 3 or 'Moderate', 4 or 'Low', 5 or 'Info'
+#     'tags'     - [Optional] The string array of tag values that you want to use to override the default tags for the rule
+# ---- [Example usage]: ---------------------
+# rules:
+#   eslint:
+#     sort-vars:
+#       severity: "Info"
+#       tags: ["Recommended", "Suggestion"]
+# -------------------------------------------
+rules:
+
+  # ======================================================================
+  # RETIRE-JS ENGINE RULE OVERRIDES
+  # ======================================================================
+  retire-js: {} # Remove this empty object {} when you are ready to specify your first rule override
+
+  # ======================================================================
+  # REGEX ENGINE RULE OVERRIDES
+  # ======================================================================
+  regex: {} # Remove this empty object {} when you are ready to specify your first rule override
+
+  # ======================================================================
+  # ESLINT ENGINE RULE OVERRIDES
+  # ======================================================================
+  eslint: {} # Remove this empty object {} when you are ready to specify your first rule override
+
+  # ======================================================================
+  # PMD ENGINE RULE OVERRIDES
+  # ======================================================================
+  pmd:
+    "ApexBadCrypto":
+      severity: 3
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    ApexCRUDViolation":
+      severity: 5
+      tags: 
+        - Security
+        - Apex
+    "ApexCSRF":
+      severity: 2 
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexDangerousMethods":
+      severity: 3
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexDoc":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Documentation
+        - Apex
+        - Deloitte
+    "ApexInsecureEndpoint":
+      severity: 3
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexOpenRedirect":
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexSharingViolations":
+      severity: 2 
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexSOQLInjection":
+      severity: 2 
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexSuggestUsingNamedCred":
+      severity: 3
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexUnitTestClassShouldHaveAsserts":
+      severity: 3
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "ApexAssertionsShouldIncludeMessage":
+      severity: 5
+      tags: 
+        - BestPractices
+        - Apex
+    "ApexUnitTestClassShouldHaveRunAs":
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "ApexUnitTestMethodShouldHaveIsTestAnnotation":
+      severity: 4
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "ApexUnitTestShouldNotUseSeeAllDataTrue":
+      severity: 3
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "ApexXSSFromEscapeFalse":
+      severity: 2
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "ApexXSSFromURLParam":
+      tags: 
+        - Recommended
+        - Security
+        - Apex
+        - Deloitte
+    "AvoidDebugStatements":
+      severity: 3
+      tags: 
+        - Recommended
+        - Performance
+        - Apex
+        - Deloitte
+    "AvoidDeeplyNestedIfStmts":
+      severity: 3
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "AvoidGlobalModifier":
+      severity: 3
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "AvoidHardcodingId":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "AvoidLogicInTrigger":
+      severity: 2 
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "AvoidNonExistentAnnotations":
+      severity: 3 
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "AvoidDirectAccessTriggerMap":
+      severity: 5
+      tags: 
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "AvoidWithStatement":
+      tags: 
+        - BestPractices
+        - JavaScript
+        - Deloitte
+    "ClassNamingConventions":
+      severity: 3 
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "CognitiveComplexity":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "ConsistentReturn":
+      tags: 
+        - BestPractices
+        - JavaScript
+        - Deloitte
+    "CyclomaticComplexity":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "DebugsShouldUseLoggingLevel":
+      severity: 5
+      tags:
+        - BestPractices
+        - Apex
+    "EmptyCatchBlock":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "EmptyIfStmt":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "EmptyStatementBlock":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "EmptyTryOrFinallyBlock":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "EmptyWhileStmt":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "ExcessiveClassLength":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "ExcessiveParameterList":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "ExcessivePublicCount":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "FieldDeclarationsShouldBeAtStart":
+      severity: 4 
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "FieldNamingConventions":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "ForLoopsMustUseBraces":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "FormalParameterNamingConventions":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "GlobalVariable":
+      severity: 5 
+      tags: 
+        - Performance
+        - JavaScript
+    "IfElseStmtsMustUseBraces":
+      severity: 5
+      tags: 
+        - CodeStyle
+        - Apex
+    "IfStmtsMustUseBraces":
+      severity: 5
+      tags: 
+        - CodeStyle
+        - Apex
+    "InaccessibleAuraEnabledGetter":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "LocalVariableNamingConventions":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "MethodNamingConventions":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "MethodWithSameNameAsEnclosingClass":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "NcssConstructorCount":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "NcssMethodCount":
+      severity: 3 
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "NcssTypeCount":
+      severity: 3 
+      tags: 
+        - Design
+        - Apex
+        - Deloitte
+    "OneDeclarationPerLine":
+      severity: 3 
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "OperationWithLimitsInLoop":
+      severity: 2 
+      tags: 
+        - Recommended
+        - Performance
+        - Apex
+        - Deloitte
+    "OverrideBothEqualsAndHashcode":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "PropertyNamingConventions":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+    "ScopeForInVariable":
+      tags: 
+        - BestPractices
+        - JavaScript
+        - Deloitte
+    "StdCyclomaticComplexity":
+      severity: 3
+      tags: 
+        - Design
+        - Apex
+        - Deloitte
+    "TestMethodsMustBeInTestClasses":
+      severity: 3
+      tags: 
+        - Recommended
+        - ErrorProne
+        - Apex
+        - Deloitte
+    "TooManyFields":
+      severity: 3
+      tags: 
+        - Recommended
+        - Design
+        - Apex
+        - Deloitte
+    "UnusedLocalVariable":
+      tags: 
+        - Recommended
+        - BestPractices
+        - Apex
+        - Deloitte
+    "UseBaseWithParseInt":
+      tags: 
+        - BestPractices
+        - JavaScript
+        - Deloitte
+    "VfCsrf":
+      severity: 5
+      tags: 
+        - Security
+        - Visualforce
+    "WhileLoopsMustUseBraces":
+      severity: 3
+      tags: 
+        - Recommended
+        - CodeStyle
+        - Apex
+        - Deloitte
+
+# Engine specific custom configuration settings of the format engines.{engine_name}.{property_name} = {value} where:
+#   {engine_name} is the name of the engine containing the setting that you want to override.
+#   {property_name} is the name of a property that you would like to override.
+# Each engine may have its own set of properties available to help customize that particular engine's behavior.
+engines:
+
+  # ======================================================================
+  # CPD ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-cpd.html#cpd-configuration-reference
+  # ======================================================================
+  cpd:
+
+    # Whether to turn off the 'cpd' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: true # Modified from: false
+
+    # Indicates the specific 'java' command associated with the JRE or JDK to use for the 'cpd' engine.
+    # May be provided as the name of a command that exists on the path, or an absolute file path location.
+    # If unspecified, or specified as null, then an attempt will be made to automatically discover a 'java' command from your environment.
+    java_command: null
+
+    # Specifies the list of file extensions to associate to each rule language.
+    # The rule(s) associated with a given language will run against all the files in your workspace containing one of
+    # the specified file extensions. Each file extension can only be associated to one language. If a specific language
+    # is not specified, then a set of default file extensions for that language will be used.
+    file_extensions:
+      apex:
+        - .cls
+        - .trigger
+      html:
+        - .html
+        - .htm
+        - .xhtml
+        - .xht
+        - .shtml
+        - .cmp
+      javascript:
+        - .js
+        - .cjs
+        - .mjs
+      typescript:
+        - .ts
+      visualforce:
+        - .page
+        - .component
+      xml:
+        - .xml
+
+    # Specifies the minimum tokens threshold for each rule language.
+    # The minimum tokens threshold is the number of tokens required to be in a duplicate block of code in order to be
+    # reported as a violation. The concept of a token may be defined differently per language, but in general it is a
+    # distinct basic element of source code. For example, this could be language specific keywords, identifiers,
+    # operators, literals, and more. See https://docs.pmd-code.org/latest/pmd_userdocs_cpd.html to learn more.
+    # If a value for a language is unspecified, then the default value of 100 will be used for that language.
+    minimum_tokens:
+      apex: 100
+      html: 100
+      javascript: 100
+      typescript: 100
+      visualforce: 100
+      xml: 100
+
+    # Indicates whether to ignore multiple copies of files of the same name and length.
+    skip_duplicate_files: false
+
+  # ======================================================================
+  # FLOW SCANNER ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-flow.html#flow-scanner-configuration-reference
+  # ======================================================================
+  flow:
+
+    # Whether to turn off the 'flow' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: true # Modified from: false
+
+    # Indicates the specific Python command to use for the 'Flow Scanner' engine.
+    # May be provided as the name of a command that exists on the path, or an absolute file path location.
+    # If unspecified, or specified as null, then an attempt will be made to automatically discover a Python command from your environment.
+    python_command: null
+
+  # ======================================================================
+  # SFGE ENGINE CONFIGURATION
+  # This engine is in Developer Preview and is subject to change.
+  # To learn more about this configuration, visit:
+  #   [PLACEHOLDER LINK]
+  # ======================================================================
+  sfge:
+
+    # Whether to turn off the 'sfge' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: true # Modified from: false
+
+    # Whether to prevent 'sfge' from throwing LimitReached violations for complex paths.
+    # By default, Salesforce Graph Engine attempts to detect complex paths that might cause OutOfMemory errors,
+    # and throws LimitReached violations for these paths to continue evaluating other paths safely. The allowed
+    # complexity is dynamically calculated based on the max Java heap size available, but in some cases you may
+    # desire to disable this check in addition to increasing java_max_heap_size.
+    disable_limit_reached_violations: false
+
+    # Indicates the specific 'java' command associated with the JRE or JDK to use for the 'sfge' engine.
+    # May be provided as the name of a command that exists on the path, or an absolute file path location.
+    # If unspecified, or specified as null, then an attempt will be made to automatically discover a 'java' command from your environment.
+    java_command: null
+
+    # Specifies the maximum size (in bytes) of the Java heap. The specified value is appended to the '-Xmx' Java
+    # command option. The value must be a multiple of 1024, and greater than 2MB. Append the letters 'k', 'K', 'kb',
+    # or 'KB' to indicate kilobytes, 'm', 'M', 'mb', or 'MB' to indicate megabytes, and 'g', 'G', 'gb', or 'GB' to
+    # indicate gigabytes. If unspecified, or specified as null, then the JVM will dynamically choose a default value
+    # at runtime based on system configuration.
+    java_max_heap_size: null
+
+    # Specifies the number of Java threads available for parallel execution. Increasing the thread count allows for
+    # Salesforce Graph Engine to evaluate more paths at the same time.
+    java_thread_count: 4
+
+    # Specifies the maximum time (in milliseconds) a specific Java thread may execute before Salesforce Graph Engine
+    # issues a Timeout violation.
+    java_thread_timeout: 900000
+
+  # ======================================================================
+  # RETIRE-JS ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-retire-js.html#retirejs-configuration-reference
+  # ======================================================================
+  retire-js:
+
+    # Whether to turn off the 'retire-js' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: true
+
+  # ======================================================================
+  # REGEX ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-regex.html#regex-configuration-reference
+  # ======================================================================
+  regex:
+
+    # Whether to turn off the 'regex' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: false
+
+    # Custom rules to be added to the 'regex' engine of the format custom_rules.{rule_name}.{rule_property_name} = {value} where:
+    #   {rule_name} is the name you would like to give to your custom rule
+    #   {rule_property_name} is the name of one of the rule properties. You may specify the following rule properties:
+    #     'regex'             - The regular expression that triggers a violation when matched against the contents of a file.
+    #     'file_extensions'   - The extensions of the files that you would like to test the regular expression against.
+    #     'description'       - A description of the rule's purpose
+    #     'violation_message' - [Optional] The message emitted when a rule violation occurs.
+    #                           This message is intended to help the user understand the violation.
+    #                           Default: 'A match of the regular expression {regex} was found for rule {rule_name}: {description}'
+    #     'severity'          - [Optional] The severity level to apply to this rule by default.
+    #                           Possible values: 1 or 'Critical', 2 or 'High', 3 or 'Moderate', 4 or 'Low', 5 or 'Info'
+    #                           Default: 3
+    #     'tags'              - [Optional] The string array of tag values to apply to this rule by default.
+    #                           Default: ['Recommended']
+    # ---- [Example usage]: ---------------------
+    # engines: 
+    #   regex:
+    #     custom_rules:
+    #       "NoTodoComments":
+    #         regex: /\/\/[ \t]*TODO/gi
+    #         file_extensions: [".apex", ".cls", ".trigger"]
+    #         description: "Prevents TODO comments from being in apex code."
+    #         violation_message: "A comment with a TODO statement was found. Please remove TODO statements from your apex code."
+    #         severity: "Info"
+    #         tags: ["TechDebt"]
+    # -------------------------------------------
+    custom_rules:
+      # We give the rule a name and the same priority/severity
+      PreferTypeForNameOverSObjectDescribe:
+
+        regex: '/Schema\.getGlobalDescribe\(\)\.get\(/g' 
+        
+        # Limit the scan to Apex files
+        file_extensions: [".cls", ".trigger"]
+        
+        description: "Avoid 'Schema.getGlobalDescribe().get(..)' as it can be slow and use more resources."
+        
+        # Use the suggested optimization as the violation message
+        violation_message: "Consider using '((SObject) Type.forName(typeName).newInstance()).getSObjectType();' instead of Schema.getGlobalDescribe() as it can be slow and use more resources."
+        
+        # Use the same severity from the original PMD rule (Priority 2)
+        severity: 2 # High
+        
+        # Add your custom tags
+        tags: ["Deloitte", "Performance", "Apex"] 
+      NuggetTriggerFrameworkAdherence:
+
+        regex: '/^((?!TRG_TriggerHandler)[\s\S])*$/gs'
+        
+        # Limit the scan to Apex Trigger files only
+        file_extensions: [".trigger"]
+        
+        description: "Enforces usage of the Belgium Trigger Handler Framework (TRG_TriggerHandler) in all triggers for maintainability and best practices."
+        
+        # The message shown when a violation is found
+        violation_message: "Trigger body does not conform to the Belgium Framework. It must instantiate 'TRG_TriggerHandler' and call 'handleTrigger()' within the body to be compliant."
+        
+        # Set a high severity, as this is an architectural violation
+        severity: 2 # High
+
+        tags: ["Deloitte", "BestPractices", "Apex"]
+
+      # NuggetFrameworkMissingNewInstance:
+      
+      #   # Match a file that:
+      #   # 1. Contains 'implements TRG_ServiceFactory.IService'
+      #   # 2. AND Does NOT contain 'getNewInstance' method signature
+      #   regex: '/implements\s+TRG\_ServiceFactory\.IService[\s\S]*^(?![\s\S]*public\s+static\s+.*getNewInstance\s*\(.*\)[\s\S]*$/gm'
+        
+      #   file_extensions: [".cls"]
+        
+      #   description: "Service class implements TRG_ServiceFactory.IService but is missing the required static getNewInstance method."
+        
+      #   violation_message: "Classes implementing TRG_ServiceFactory.IService must include a static 'getNewInstance' method to ensure proper factory instantiation."
+        
+      #   severity: 4 # Specified severity
+        
+      #   tags: ["Deloitte", "BestPractices", "Apex"]
+
+      NuggetServiceNamingCompliance:
+
+        regex: '/(class)\s+\w*(Srv|Service)\b\s*(?![\s\S]*implements\s[\s\S]*TRG_ServiceFactory\.IService)[\s\S]*?\{/gi'
+        
+        file_extensions: [".cls"]
+        
+        description: "Enforces that all service classes identified by name (Srv/Service) must implement the TRG_ServiceFactory.IService interface."
+        
+        violation_message: "Class name suggests a service (contains 'Srv' or 'Service') but does not implement the required TRG_ServiceFactory.IService interface. Implement the interface or rename the class."
+        
+        severity: 3 
+        
+        tags: ["Deloitte", "BestPractices", "Apex"]
+      
+      NuggetDomainNamingCompliance:
+
+        regex: '/(class)\s+\w*(Dom|Domain)\b\s*(?![\s\S]*extends\s[\s\S]*TRG_sObjectDomain)[\s\S]*?\{/gi'
+        
+        file_extensions: [".cls"]
+
+        description: "Enforces that all domain classes identified by name (Dom/Domain) must extend the TRG_sObjectDomain base class."
+
+        violation_message: "Class name suggests a domain (contains 'Dom' or 'Domain') but does not extend the required TRG_sObjectDomain base class. Implement the extension or rename the class."
+
+        severity: 3 
+        
+        tags: ["Deloitte", "BestPractices", "Apex"]
+      
+      NuggetSelectorNamingCompliance:
+
+        regex: '/(class)\s+\w*(Sel|Selector)\b\s*(?![\s\S]*extends\s[\s\S]*TRG_sObjectSelector)[\s\S]*?\{/gi'
+
+        file_extensions: [".cls"]
+
+        description: "Enforces that all selector classes identified by name (Sel/Selector) must extend the TRG_sObjectSelector base class."
+
+        violation_message: "Class name suggests a selector (contains 'Sel' or 'Selector') but does not extend the required TRG_sObjectSelector base class. Implement the extension or rename the class."
+
+        severity: 3 
+        
+        tags: ["Deloitte", "BestPractices", "Apex"]
+
+      NuggetAvoidQueryOnRecordType:
+      
+        regex: '/(\[|\s)select\s+[\s\S]*?from\s+RecordType\s*(\]|(where|limit|order\s+by)[\s\S]*?\])/gim'
+
+        file_extensions: [".cls"]
+
+        description: "Avoid direct SOQL queries on the RecordType object; use UTL_SF.getRecordTypeInfoByName instead for better performance and maintainability."
+
+        violation_message: "Direct SOQL query on RecordType object detected. Use UTL_SF.getRecordTypeInfoByName instead."
+
+        severity: 3 
+        
+        tags: ["Deloitte", "BestPractices", "Apex"]
+
+  # ======================================================================
+  # ESLINT ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-eslint.html#eslint-configuration-reference
+  # ======================================================================
+  eslint:
+
+    # Whether to turn off the 'eslint' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: false
+
+    # Your project's main ESLint configuration file. May be an absolute path or a path relative to the config_root.
+    # If null and auto_discover_eslint_config is true, then Code Analyzer will attempt to discover/apply it automatically.
+    # We currently support both flat and legacy ESLint configuration files, but will be removing support for legacy eslintrc
+    # ESLint configuration files in the coming months.
+    # See https://eslint.org/docs/latest/use/configure/configuration-files to learn more.
+    eslint_config_file: eslint.config.js # Modified from: null
+
+    # Your project's legacy ".eslintignore" file. May be an absolute path or a path relative to the config_root.
+    # If null and auto_discover_eslint_config is true, then Code Analyzer will attempt to discover/apply it automatically.
+    # Legacy ".eslintignore" files are currently only supported with ESLint v8 when used alongside of legacy ESLint configuration
+    # files. We will be removing support for ESLint v8 and this field in the coming months. Therefore, we recommend that you instead
+    # supply the files that you wish to ignore within a flat ESLint configuration file, specified by the eslint_config_file field.
+    # See https://eslint.org/docs/latest/use/configure/ignore to learn more.
+    eslint_ignore_file: null
+
+    # Whether to have Code Analyzer automatically discover/apply any ESLint configuration and ignore files from your workspace.
+    auto_discover_eslint_config: false
+
+    # Whether to turn off the default base configuration that supplies the standard ESLint rules for JavaScript files.
+    # The base configuration for JavaScript files adds the rules from the "eslint:all" configuration to Code Analyzer.
+    # See https://eslint.org/docs/latest/rules for the list of rules.
+    disable_javascript_base_config: true 
+
+    # Whether to turn off the default base configuration that supplies the LWC rules for JavaScript files.
+    # The base configuration for LWC adds the rules from the "@salesforce/eslint-config-lwc/recommended"
+    # and "plugin:@lwc/lwc-platform/recommended" configurations to Code Analyzer.
+    # See https://github.com/salesforce/eslint-config-lwc and https://www.npmjs.com/package/@lwc/eslint-plugin-lwc-platform.
+    disable_lwc_base_config: true 
+    
+    # Whether to turn off the default base configuration that supplies the standard rules for TypeScript files
+    # The base configuration for TypeScript files adds the rules from the "plugin:@typescript-eslint:all" configuration to Code Analyzer.
+    # See https://typescript-eslint.io/rules and https://eslint.org/docs/latest/rules for the lists of rules.
+    disable_typescript_base_config: true 
+
+    # Extensions of the files in your workspace that will be used to discover rules.
+    # To associate file extensions to the standard ESLint JavaScript rules, LWC rules, or custom JavaScript-based
+    # rules, add them under the 'javascript' language. To associate file extensions to the standard TypeScript
+    # rules or custom TypeScript-based rules, add them under the 'typescript' language.
+    # To associate file extensions to standard LWC HTML rules, Component (CMP) rules, or custom HTML rules, add them
+    # under the 'html' language. To allow for the discovery of custom rules that are associated with any other language,
+    # then add the associated file extensions under the 'other' language.
+    file_extensions:
+      javascript:
+        - .js
+        - .cjs
+        - .mjs
+      typescript:
+        - .ts
+      other: []
+
+  # ======================================================================
+  # PMD ENGINE CONFIGURATION
+  # To learn more about this configuration, visit:
+  #   https://developer.salesforce.com/docs/platform/salesforce-code-analyzer/guide/engine-pmd.html#pmd-configuration-reference
+  # ======================================================================
+  pmd:
+
+    # Whether to turn off the 'pmd' engine so that it is not included when running Code Analyzer commands.
+    disable_engine: false
+
+    # Indicates the specific 'java' command associated with the JRE or JDK to use for the 'pmd' engine.
+    # May be provided as the name of a command that exists on the path, or an absolute file path location.
+    # If unspecified, or specified as null, then an attempt will be made to automatically discover a 'java' command from your environment.
+    java_command: null # Last calculated by the config command as: "C:\\Program Files\\Java\\jdk-21\\bin\\java"
+
+    # Specifies the list of file extensions to associate to each rule language.
+    # The rule(s) associated with a given language will run against all the files in your workspace containing one of
+    # the specified file extensions. Each file extension can only be associated to one language. If a specific language
+    # is not specified, then a set of default file extensions for that language will be used.
+    file_extensions: # Modified from: {"apex":[".cls",".trigger"],"html":[".html",".htm",".xhtml",".xht",".shtml",".cmp"],"javascript":[".js",".cjs",".mjs"],"typescript":[".ts"],"visualforce":[".page",".component"],"xml":[".xml"]}
+      apex:
+        - .cls
+        - .trigger
+      html:
+        - .html
+      javascript:
+        - .js
+      typescript:
+        - .ts
+      visualforce:
+        - .page
+        - .component
+      # xml:
+      #   - .xml
+
+    # List of jar files and/or folders to add the Java classpath when running PMD.
+    # Each entry may be given as an absolute path or a relative path to 'config_root'.
+    # This field is primarily used to supply custom Java based rule definitions to PMD.
+    # See https://pmd.github.io/pmd/pmd_userdocs_extending_writing_java_rules.html
+    java_classpath_entries: []
+
+    # List of xml ruleset files containing custom PMD rules to be made available for rule selection.
+    # Each ruleset must be an xml file that is either:
+    #   - on disk (provided as an absolute path or a relative path to 'config_root')
+    #   - or a relative resource found on the Java classpath.
+    # Not all custom rules can be fully defined within an xml ruleset file. For example, Java based rules may be defined in jar files.
+    # In these cases, you will need to also add your additional files to the Java classpath using the 'java_classpath_entries' field.
+    # See https://pmd.github.io/pmd/pmd_userdocs_making_rulesets.html to learn more about PMD rulesets.
+    # custom_rulesets: # Modified from: []
+    #   - pmd\rules.xml
+
+# ======================================================================
+# END OF CODE ANALYZER CONFIGURATION
+# ======================================================================

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Order__c</fullName>
+    <label>Display Order</label>
+    <description>Order in which this metric appears in the UI (1, 2, 3...)</description>
+    <type>Number</type>
+    <precision>3</precision>
+    <scale>0</scale>
+    <required>true</required>
+    <unique>false</unique>
+    <externalId>false</externalId>
+</CustomField>

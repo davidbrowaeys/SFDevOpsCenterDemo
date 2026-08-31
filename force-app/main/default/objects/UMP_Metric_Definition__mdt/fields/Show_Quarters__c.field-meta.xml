@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Quarters__c</fullName>
+    <label>Show Quarters</label>
+    <description>Display Last Quarter vs This Quarter comparison for this metric</description>
+    <type>Checkbox</type>
+    <defaultValue>true</defaultValue>
+</CustomField>

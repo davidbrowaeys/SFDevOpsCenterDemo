@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Universal Metric Panel</masterLabel>
+    <description>Configurable metric panel with donut chart for visualizing child record data</description>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="configName" type="String" label="Configuration Name" 
+                      description="DeveloperName of the UMP_Metric_Config__mdt record" required="true"/>
+            <property name="panelTitle" type="String" label="Panel Title (Optional)" 
+                      description="Custom title for the panel. Leave blank to use default."/>
+            <property name="donutTitleOverride" type="String" label="Donut Chart Title (Optional)" 
+                      description="Override the donut chart title from metadata. Leave blank to use metadata value."/>
+            <property name="metricLabel1" type="String" label="Metric Label 1 (Optional)" 
+                      description="Override label for the first metric (by display order). Leave blank to use metadata value."/>
+            <property name="metricLabel2" type="String" label="Metric Label 2 (Optional)" 
+                      description="Override label for the second metric (by display order). Leave blank to use metadata value."/>
+            <property name="panelBackground" type="String" label="Panel Background (Optional)" 
+                      description="CSS background value. Default: linear-gradient(135deg, #0d1b3e 0%, #1a2f5a 100%)"/>
+            <property name="hideWhenEmpty" type="Boolean" label="Hide When Empty" 
+                      description="Hide the entire panel when there is no data (total count is 0)" default="false"/>
+            
+            <supportedFormFactors>
+                <supportedFormFactor type="Small"/>
+                <supportedFormFactor type="Large"/>
+            </supportedFormFactors>
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage">
+            <property name="recordId" type="String" label="Record ID" 
+                      description="ID of the parent record to display metrics for" required="true"/>
+            <property name="configName" type="String" label="Configuration Name" 
+                      description="DeveloperName of the UMP_Metric_Config__mdt record" required="true"/>
+            <property name="panelTitle" type="String" label="Panel Title (Optional)" 
+                      description="Custom title for the panel. Leave blank to use default."/>
+            <property name="donutTitleOverride" type="String" label="Donut Chart Title (Optional)" 
+                      description="Override the donut chart title from metadata. Leave blank to use metadata value."/>
+            <property name="metricLabel1" type="String" label="Metric Label 1 (Optional)" 
+                      description="Override label for the first metric (by display order). Leave blank to use metadata value."/>
+            <property name="metricLabel2" type="String" label="Metric Label 2 (Optional)" 
+                      description="Override label for the second metric (by display order). Leave blank to use metadata value."/>
+            <property name="panelBackground" type="String" label="Panel Background (Optional)" 
+                      description="CSS background value. Default: linear-gradient(135deg, #0d1b3e 0%, #1a2f5a 100%)"/>
+            <property name="hideWhenEmpty" type="Boolean" label="Hide When Empty" 
+                      description="Hide the entire panel when there is no data (total count is 0)" default="false"/>
+            <supportedFormFactors>
+                <supportedFormFactor type="Small"/>
+                <supportedFormFactor type="Large"/>
+            </supportedFormFactors>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
